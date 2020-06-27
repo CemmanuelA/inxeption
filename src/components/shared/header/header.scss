@@ -1,0 +1,120 @@
+header {
+    top: 0;
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background: #70ABAF;
+    display: flex;
+    .nav-bar {
+        display: flex;
+        flex: 0.5;  
+        // Link desktop
+        li {
+            list-style-type: none;
+            margin: 0;
+            a {
+                height: 100%;
+                width: 100%;
+                color: #32292F;
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 1em;
+                &:hover {
+                    background: #99E1D9;
+                }
+            }
+        }
+        .link-d {
+            height: 100%;
+            display: none;
+            flex: 1;
+            border-right: 1px solid #ccc;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+           
+        }
+        .mobile {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: calc(50% - 15px);
+            left: 10px;
+            img {
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+            }
+            .mobile-menu {
+                background: #70ABAF;
+                position: absolute;
+                top: calc(50% + 16px);
+                left: -10px;
+                height: 100px;
+                width: 150px;
+                z-index: 1; 
+                display: none;
+                .link-m {
+                    height: 30px;
+                    width: 100%;
+                    a {
+                        display: block;
+                    }
+
+                }
+            }
+        }
+    }
+    .title-container {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        h1 {
+            color: #32292F;
+            line-height: 10vh;
+            font-size: 3em;
+        }
+    }
+}
+
+.active-link {
+    background: #99E1D9;;
+}
+
+// Small devices 
+@media (min-width: 576px) { 
+    .card {
+        flex: 0 0 70%;
+    }
+ }
+
+// tablet
+@media only screen and (min-width: 768px) {
+    .card {
+        flex: 0 0 40%;
+    }
+}
+
+// desktop
+@media only screen and (min-width: 992px) {
+    header {
+        .nav-bar {
+            
+            .link-d {
+                display: block;
+            }
+            .mobile {
+                display: none;
+            }
+        }
+    }
+}
+
+// large desktop
+@media only screen and (min-width: 1200px) {
+    .card {
+        height: 520px;
+    }
+}

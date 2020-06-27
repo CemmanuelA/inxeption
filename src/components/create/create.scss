@@ -1,0 +1,134 @@
+.form-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2.5rem;
+    flex-wrap: wrap;
+    .fields-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 0 0 100%;
+        margin-bottom: 3rem;
+        div {
+            h1 {
+                color: #32292F;
+                margin-bottom: 2rem;
+                font-size: 1.5em;
+            }
+        }
+        .in-container {
+            margin-bottom: 4rem;
+            label {
+                font-weight: bold;
+                color: #32292F;
+                font-size: 1em;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+                border-radius: 5px;
+                padding: 0.2rem;
+                color: #32292F;
+                font-size: 15px;                
+                border: 1px solid #ccc;
+            }
+    
+            
+        }
+    }
+
+    .img-container {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        img {
+            height: 80%;
+            width: 80%;
+            
+        }
+    }
+}
+
+.ip-text {
+    &:active {
+        border-color: #32292F;
+    }
+}
+.error {
+    color: rgb(226, 64, 64);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    .btn {
+        width: 250px;
+        height: 30px;
+        background: #A28497;
+        border: 1px solid;
+        border-color: #A28497;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+            background: #C4B2BC;
+        }
+    }
+}
+
+// Small devices 
+@media (min-width: 576px) { 
+    .form-container {
+        .fields-container {
+            flex: 0 0 90%;
+            .in-container {
+                margin-bottom: 2rem ;
+            }
+        }
+        .img-container {
+            flex: 0 0 90%;
+        }
+    }
+}
+
+// tablet
+@media only screen and (min-width: 768px) {
+    .form-container {
+        .fields-container {
+            margin-bottom: 0;
+            flex: 0 0 40%;
+            .in-container {
+                margin-bottom: 2rem ;
+            }
+        }
+        .img-container {
+            flex: 0 0 60%;
+        }
+    }
+}
+
+// desktop
+@media only screen and (min-width: 992px) {
+    .form-container {
+        .fields-container {
+            .in-container {
+                margin-bottom: 0 ;
+            }
+        }
+    }
+}
+
+// large desktop
+@media only screen and (min-width: 1200px) {
+    .form-container {
+        .img-container {
+            img {
+
+            }
+        }
+    }
+}
