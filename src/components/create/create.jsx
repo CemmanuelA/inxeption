@@ -1,5 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { withRouter } from 'react-router-dom';
 import * as Yup from 'yup';
 
 import MyContext from '../../appContext/context';
@@ -41,7 +42,11 @@ class Create extends React.Component {
         // empty fields
         this.setState({preview: ''});
         this.imgRef.current.value = null;
+        setTimeout(() => {
+            this.props.history.push('/gallery');
+        }, 1000);
         alert('Place added successful!')
+        
     }
      validation = Yup.object({
         title: Yup.string()
@@ -49,7 +54,7 @@ class Create extends React.Component {
         .required('Required'),
         description: Yup.string()
         .min(5, 'Must be 5 characters or more')
-        .max(250,'Must be 30 characters or less')
+        .max(250,'Must be 250 characters or less')
         .required('Required'),
         photo: Yup.mixed() 
         .test('fileformat', "Unsupported File Format", value => value && this.SUPPORTED_FORMATS.includes(value.type))
@@ -116,4 +121,4 @@ class Create extends React.Component {
     }
 }
 
-export default Create;
+export default withRouter(Create);

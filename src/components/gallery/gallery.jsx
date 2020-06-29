@@ -7,7 +7,7 @@ const Gallery  = () => {
     const context = React.useContext(MyContext);
     const gallery = context.gallery;
     return (
-    <div className="gallery-container"> 
+    <div className="gallery-container scroll"> 
         {
            gallery.length ? 
             gallery.map( place => <Card key={place.id} place={place} />) 
