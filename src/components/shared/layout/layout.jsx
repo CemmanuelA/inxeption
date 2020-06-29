@@ -6,7 +6,7 @@ import AppContext from '../../../appContext/appContext';
 
 const Layout = (props) => {
     return (
-        <div style={{paddingTop: 11 + 'vh'}}>
+        <div style={{paddingTop: 10 + 'vh'}}>
             <Router>
                 <AppContext>
                         <Header/>

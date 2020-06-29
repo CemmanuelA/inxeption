@@ -23,19 +23,19 @@ class Header extends React.Component {
                         <NavLink to="/create" activeClassName="active-link" >Create</NavLink>
                     </li>
                     <div className="mobile">
-                        <img src={process.env.PUBLIC_URL + 'assets/menu.png'} alt="menu icon" onClick={() => this.toggleMenu()}/>
+                        <img src={process.env.PUBLIC_URL + 'assets/images/menu.png'} alt="menu icon" onClick={() => this.toggleMenu()}/>
                         <div className="mobile-menu" ref={this.menuMobileRef}>
-                            <li className="link-m">
+                            <li className="link-m" onClick={() => this.toggleMenu()}>
                                 <NavLink to="/gallery" activeClassName="active-link" >Gallery</NavLink>
                             </li>
-                            <li className="link-m">
+                            <li className="link-m" onClick={() => this.toggleMenu()}>
                                 <NavLink to="/create" activeClassName="active-link" >Create</NavLink>
                             </li>
                         </div>
                     </div>
                 </div>
                 <div className="title-container">
-                    <h1>Places</h1>
+                    <h1>Mementos</h1>
                 </div>
             </header>
         );

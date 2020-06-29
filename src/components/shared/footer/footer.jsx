@@ -4,7 +4,7 @@ import './footer.scss';
 const Footer = () => {
     return (
         <footer>
-            <h3>Places</h3>
+            <h3>Mementos</h3>
         </footer>
     )
 }

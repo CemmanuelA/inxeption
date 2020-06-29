@@ -73,7 +73,7 @@ class Create extends React.Component {
                         <Form className="form-container" autoComplete="off">
                             <div className="fields-container">
                                 <div>
-                                    <h1>Create place</h1>
+                                    <h1>Add a new place</h1>
                                 </div>
     
                                 <div className="in-container">

@@ -9,10 +9,10 @@ const Gallery  = () => {
     return (
     <div className="gallery-container"> 
         {
-           gallery ? 
+           gallery.length ? 
             gallery.map( place => <Card key={place.id} place={place} />) 
             : 
-            <h4> Add new places in Create Tab</h4>
+            (<h4> There aren't any place to show</h4>)
         }
     </div>
     )

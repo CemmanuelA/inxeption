@@ -14,6 +14,7 @@
                 color: #32292F;
                 margin-bottom: 2rem;
                 font-size: 1.5em;
+                font-family: 'Narrow-medium';
             }
         }
         .in-container {
@@ -22,6 +23,7 @@
                 font-weight: bold;
                 color: #32292F;
                 font-size: 1em;
+                font-family: 'Narrow-regular';
             }
             input {
                 width: 100%;
@@ -29,8 +31,9 @@
                 border-radius: 5px;
                 padding: 0.2rem;
                 color: #32292F;
-                font-size: 15px;                
+                font-size: 1em  ;                
                 border: 1px solid #ccc;
+                font-family: 'Narrow-regular';
             }
     
             
@@ -67,15 +70,17 @@
     .btn {
         width: 250px;
         height: 30px;
-        background: #A28497;
+        background: #8BBBB7;
         border: 1px solid;
-        border-color: #A28497;
+        border-color: #8BBBB7;
         border-radius: 5px;
-        color: #fff;
+        color: #32292F;
+        font-size: 1em;
         font-weight: 600;
+        font-family: 'Narrow-bold';
         cursor: pointer;
         &:hover {
-            background: #C4B2BC;
+            background: #98C3BF;
         }
     }
 }

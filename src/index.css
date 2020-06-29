@@ -18,6 +18,21 @@ body {
   padding-bottom: 5vh;
 }
 
+@font-face {
+  font-family: "Narrow-bold";
+  src: url("/public/assets/font/ArchivoNarrow-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Narrow-medium";
+  src: url("/public/assets/font/ArchivoNarrow-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Narrow-regular";
+  src: url("/public/assets/font/ArchivoNarrow-Regular.ttf");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
