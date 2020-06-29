@@ -9,7 +9,8 @@ import './create.scss';
 class Create extends React.Component {
     static  contextType = MyContext;
     state = { 
-        preview: ''
+        preview: '',
+        create: false
     }
      imgRef = React.createRef();
      initialState = {
@@ -40,12 +41,11 @@ class Create extends React.Component {
         this.context.addPlace(place);
         localStorage.setItem("gallery", JSON.stringify(this.context.gallery));
         // empty fields
-        this.setState({preview: ''});
+        this.setState({preview: '', create: true});
         this.imgRef.current.value = null;
         setTimeout(() => {
             this.props.history.push('/gallery');
         }, 1000);
-        alert('Place added successful!')
         
     }
      validation = Yup.object({
@@ -109,6 +109,18 @@ class Create extends React.Component {
                                         Add place
                                     </button>
                                 </div>
+                                {
+                                    this.state.create ?
+                                        <div className='success-text'>
+                                            <span>
+                                                Place created  
+                                                <img src={process.env.PUBLIC_URL + 'assets/images/check.png'} 
+                                                    alt="check" />
+                                            </span>
+                                        </div>
+                                        :
+                                        null
+                                }
                             </div>
                             <div className="img-container" >
                                 {this.state.preview ? <img src={this.state.preview} alt="preview"/> : null}

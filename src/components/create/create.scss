@@ -85,6 +85,23 @@
     }
 }
 
+.success-text {
+    margin-top: 2rem;
+    text-align: center;
+    span {
+        font-size: 1.2em;
+        color: green;
+        font-weight: bold;
+        font-family: 'Narrow-regular';
+        img {
+            height: 25px; 
+            width: 25px; 
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+    }
+}
+
 // Small devices 
 @media (min-width: 576px) { 
     .form-container {
